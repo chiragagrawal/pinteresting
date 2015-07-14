@@ -81,4 +81,14 @@ Pinteresting::Application.configure do
   #required for heroku
   #Note to set this for heroku
   config.action_mailer.default_url_options = { :host => 'chirag-pinterestings.herokuapp.com' }
+config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+
+    }
+  }
+
 end
