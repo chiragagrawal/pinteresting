@@ -27,7 +27,7 @@
               <span class="glyphicon glyphicon-plus"></span> New Pin
             <% end %>
           </li>
-         <li><%= link_to 'New Pin', new_pin_path %></li>
+       
           <li><%= link_to "Log out",destroy_user_session_path, method: :delete%></li>
         <% else %>
           <li><%= link_to "Sign in",new_user_session_path %></li>
